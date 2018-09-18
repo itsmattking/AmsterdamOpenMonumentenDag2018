@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Open Monumenten Dag</string>
+    <string name="title_activity_monuments">@string/app_name</string>
+
+    <string name="action_browse">Browse</string>
+    <string name="action_saved">Saved</string>
+    <string name="action_map">Map</string>
+    <string name="save">Save</string>
+    <string name="title_activity_monument_detail">@string/app_name</string>
+    <string name="refreshments_available">Refreshments available</string>
+    <string name="wheelchair_accessible">Wheelchair accessible</string>
+    <string name="monument_detail_did_you_know_header">Did you know?</string>
+    <string name="monument_detail_architect_header">Architect</string>
+    <string name="monument_detail_year_header">Year</string>
+    <string name="monument_detail_see_header">See</string>
+    <string name="monument_detail_do_header">Do</string>
+    <string name="saved_monuments_empty_placeholder_text">Your saved monuments will appear here. Start exploring!</string>
+</resources>

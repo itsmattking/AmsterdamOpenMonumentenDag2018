@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nl.amsterdam.openmonumentendag">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".OpenMonumentenDagApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".monuments.MonumentsActivity"
+            android:label="@string/title_activity_monuments"
+            android:theme="@style/AppTheme.TransparentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="<YOUR_API_KEY_HERE>" />
+
+        <activity
+            android:name=".monuments.MonumentDetailActivity"
+            android:label="@string/title_activity_monument_detail"
+            android:theme="@style/AppTheme.TransparentTheme" />
+        <activity android:name=".monuments.MonumentSearchActivity"
+            android:theme="@style/AppTheme.TransparentTheme"/>
+    </application>
+
+</manifest>

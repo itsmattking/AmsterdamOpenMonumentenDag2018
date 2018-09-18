@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".monuments.MonumentDetailActivity"
+    tools:showIn="@layout/activity_monument_detail">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/detailTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/saveLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Monument name" />
+
+        <TextView
+            android:id="@+id/detailAddressText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toStartOf="@+id/saveLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailTitleText"
+            tools:text="Herengracht 123" />
+
+        <TextView
+            android:id="@+id/detailTimingsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toStartOf="@+id/saveLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailAddressText"
+            tools:text="za: 11:00 - 17:00" />
+
+        <LinearLayout
+            android:id="@+id/saveLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/rounded_grey"
+            android:paddingBottom="4dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/detailTimingsText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailTitleText">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/detailSavedIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_saved" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="2dp"
+                android:text="@string/save"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMediumSize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorGreyLightest"
+            app:layout_constraintBottom_toBottomOf="@+id/detailWheelchairText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailEntryText" />
+
+        <TextView
+            android:id="@+id/detailEntryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/detailMapCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailTimingsText"
+            tools:text="Guided tour" />
+
+        <View
+            android:id="@+id/sep1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorGrey"
+            app:layout_constraintEnd_toStartOf="@+id/detailMapCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailEntryText" />
+
+        <TextView
+            android:id="@+id/detailWebsiteText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:autoLink="all"
+            android:ellipsize="end"
+            android:linksClickable="true"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textMediumSize"
+            android:textColorLink="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@+id/detailMapCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep1"
+            tools:text="http://www.example.nl" />
+
+        <View
+            android:id="@+id/sep2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorGrey"
+            app:layout_constraintEnd_toStartOf="@+id/detailMapCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailWebsiteText" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/detailIconRefreshments"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/refereshments_background"
+            android:padding="2dp"
+            android:src="@drawable/ic_refreshments"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep2" />
+
+        <TextView
+            android:id="@+id/detailRefreshmentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/refreshments_available"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toStartOf="@+id/detailMapCardView"
+            app:layout_constraintStart_toEndOf="@+id/detailIconRefreshments"
+            app:layout_constraintTop_toBottomOf="@+id/sep2" />
+
+        <View
+            android:id="@+id/sep3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorGrey"
+            app:layout_constraintEnd_toStartOf="@+id/detailMapCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailIconRefreshments" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/detailIconWheelchair"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/refereshments_background"
+            android:padding="2dp"
+            android:src="@drawable/ic_accessibility"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep3" />
+
+        <TextView
+            android:id="@+id/detailWheelchairText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="16dp"
+            android:text="@string/wheelchair_accessible"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toStartOf="@+id/detailMapCardView"
+            app:layout_constraintStart_toEndOf="@+id/detailIconWheelchair"
+            app:layout_constraintTop_toBottomOf="@+id/sep3" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/detailMapCardView"
+            android:layout_width="@dimen/monument_detail_map_width"
+            android:layout_height="@dimen/monument_detail_map_height"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="@dimen/monument_detail_card_corner_radius"
+            app:cardElevation="@dimen/monument_detail_card_elevation"
+            app:layout_constraintBottom_toBottomOf="@+id/detailWheelchairText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailEntryText">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/map_border"
+                android:padding="1dp">
+
+                <fragment
+                    android:id="@+id/detailMapFragment"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/detailDescriptionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="3sp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailWheelchairText"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan consectetur dui aliquet iaculis. Curabitur sodales iaculis ipsum, vel consequat tortor suscipit quis. Fusce vehicula ex ipsum, eu dignissim libero laoreet ac. Aenean consequat urna eu mauris commodo pulvinar. In id risus diam." />
+
+        <android.support.constraint.Group
+            android:id="@+id/detailYearGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="detailYearHeader,detailYearText"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/detailYearHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:minWidth="100dp"
+            android:text="@string/monument_detail_year_header"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailDescriptionText"
+            tools:text="Year"
+            />
+
+        <TextView
+            android:id="@+id/detailYearText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/detailYearHeader"
+            app:layout_constraintTop_toTopOf="@id/detailYearHeader"
+            tools:text="1900" />
+
+        <android.support.constraint.Group
+            android:id="@+id/detailArchitectGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="detailArchitectHeader,detailArchitectText"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/detailArchitectHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:minWidth="100dp"
+            android:text="@string/monument_detail_architect_header"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailYearText"
+            tools:text="Architect"/>
+
+        <TextView
+            android:id="@+id/detailArchitectText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/detailArchitectHeader"
+            app:layout_constraintTop_toTopOf="@id/detailArchitectHeader"
+            tools:text="Example name" />
+
+        <android.support.constraint.Group
+            android:id="@+id/detailSeeGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="detailSeeHeader,detailSeeText"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/detailSeeHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:minWidth="100dp"
+            android:text="@string/monument_detail_see_header"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailArchitectText"
+            tools:text="See"/>
+
+        <TextView
+            android:id="@+id/detailSeeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/detailSeeHeader"
+            app:layout_constraintTop_toTopOf="@id/detailSeeHeader"
+            tools:text="Example sight" />
+
+        <android.support.constraint.Group
+            android:id="@+id/detailDoGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="detailDoHeader,detailDoText"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/detailDoHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:minWidth="100dp"
+            android:text="@string/monument_detail_do_header"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailSeeText"
+            tools:text="Do"/>
+
+        <TextView
+            android:id="@+id/detailDoText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/detailDoHeader"
+            app:layout_constraintTop_toTopOf="@id/detailDoHeader"
+            tools:text="Example activity" />
+
+        <android.support.constraint.Group
+            android:id="@+id/detailDidYouKnowGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="detailDidYouKnowHeader,detailDidYouKnowText"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/detailDidYouKnowHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/monument_detail_did_you_know_header"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailDoText"
+            tools:text="Did you know?" />
+
+        <TextView
+            android:id="@+id/detailDidYouKnowText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:lineSpacingExtra="3sp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textMediumSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailDidYouKnowHeader"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dui elit, porta ut erat in, mattis lacinia augue." />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

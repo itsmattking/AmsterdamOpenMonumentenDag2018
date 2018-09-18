@@ -1,0 +1,68 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:paddingBottom="@dimen/saved_monuments_vertical_spacing"
+	android:paddingTop="@dimen/saved_monuments_vertical_spacing"
+	android:clickable="true"
+	android:focusable="true"
+	android:background="?android:attr/selectableItemBackground">
+
+	<ImageView
+		android:id="@+id/bannerImageView"
+		android:layout_width="@dimen/monument_banner_image_size"
+		android:layout_height="@dimen/monument_banner_image_size"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:src="@drawable/ic_accessibility" />
+
+	<TextView
+		android:id="@+id/bannerTitleText"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="10dp"
+		android:layout_marginStart="10dp"
+		android:textColor="@color/colorBlack"
+		android:textSize="@dimen/textMediumSize"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/bannerImageView"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="De Bazel" />
+
+	<TextView
+		android:id="@+id/bannerSubtitleText"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="10dp"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="1dp"
+		android:textColor="@color/colorBlack"
+		android:textSize="@dimen/textMediumSize"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/bannerImageView"
+		app:layout_constraintTop_toBottomOf="@+id/bannerTitleText"
+		tools:text="Vijelstraat 31, 1011 HK" />
+
+	<TextView
+		android:id="@+id/bannerDistanceText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="10dp"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="5dp"
+		android:background="@drawable/rounded_grey_hollow"
+		android:paddingBottom="2dp"
+		android:paddingEnd="8dp"
+		android:paddingStart="8dp"
+		android:paddingTop="2dp"
+		android:textColor="@color/colorGrey"
+		android:textSize="@dimen/textMediumSize"
+		app:layout_constraintStart_toEndOf="@+id/bannerImageView"
+		app:layout_constraintTop_toBottomOf="@+id/bannerSubtitleText"
+		tools:text="24 km"
+		android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

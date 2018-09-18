@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009de6</color>
+    <color name="colorPrimaryDark">#004699</color>
+    <color name="colorAccent">#e50082</color>
+
+	<color name="colorBlack">#000000</color>
+	<color name="colorWhite">#FFFFFF</color>
+	<color name="colorGrey">#bebebe</color>
+	<color name="colorGreyDark">#787878</color>
+	<color name="colorGreyLight">#e8e8e8</color>
+	<color name="colorBlue">#004699</color>
+
+	<color name="colorGreyLightest">#f4f4f4</color>
+
+	<color name="saveBackground">#787878</color>
+
+	<color name="refreshmentsBackground">#787878</color>
+
+	<color name="headerBackground">#bebebe</color>
+	<color name="headerGreen">#009de6</color>
+	<color name="headerYellow">#ffe600</color>
+	<color name="headerGreyDark">#787878</color>
+	<color name="headerGreyLight">#bebebe</color>
+	<color name="headerGreyLighter">#e8e8e8</color>
+	<color name="headerText">#ffffff</color>
+
+	<color name="tabBackground">#e8e8e8</color>
+	<color name="tabInactive">#787878</color>
+
+</resources>

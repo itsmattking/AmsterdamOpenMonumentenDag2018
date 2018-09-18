@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Open Monumenten Dag</string>
+    <string name="title_activity_monuments">@string/app_name</string>
+    <string name="title_activity_monument_detail">@string/app_name</string>
+    <string name="action_browse">Bladeren</string>
+    <string name="action_saved">Favorieten</string>
+    <string name="action_map">Kaart</string>
+    <string name="save">Opslaan</string>
+    <string name="refreshments_available">Eten/drinken beschikbaar</string>
+    <string name="wheelchair_accessible">Rolstoeltoegankelijk</string>
+    <string name="monument_detail_did_you_know_header">Wist je dat?</string>
+    <string name="monument_detail_architect_header">Architect</string>
+    <string name="monument_detail_year_header">Jaar</string>
+    <string name="monument_detail_see_header">Zien</string>
+    <string name="monument_detail_do_header">Doen</string>
+    <string name="saved_monuments_empty_placeholder_text">Je opgeslagen monumenten vind je hier. Begin met ontdekken!</string>
+</resources>

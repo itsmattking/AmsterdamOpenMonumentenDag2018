@@ -1,0 +1,20 @@
+<resources>
+	<dimen name="fab_margin">16dp</dimen>
+
+	<dimen name="monument_banner_image_size">70dp</dimen>
+	<dimen name="monument_card_image_height">160dp</dimen>
+	<dimen name="monument_card_corner_radius">12dp</dimen>
+	<dimen name="monument_card_elevation">4dp</dimen>
+
+	<dimen name="saved_monuments_vertical_spacing">10dp</dimen>
+	<dimen name="info_window_image_size">50dp</dimen>
+
+	<dimen name="monument_detail_map_width">120dp</dimen>
+	<dimen name="monument_detail_map_height">120dp</dimen>
+	<dimen name="monument_detail_card_corner_radius">4dp</dimen>
+	<dimen name="monument_detail_card_elevation">0dp</dimen>
+
+	<dimen name="textSmallSize">12sp</dimen>
+	<dimen name="textMediumSize">14sp</dimen>
+	<dimen name="textLargeSize">16sp</dimen>
+</resources>
